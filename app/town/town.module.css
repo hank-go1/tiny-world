@@ -1,0 +1,121 @@
+.shell {
+  --cream: oklch(.974 .031 88);
+  --ink: oklch(.34 .035 206);
+  --sage: oklch(.49 .055 156);
+  --muted-town: oklch(.55 .03 133);
+  position: fixed; inset: 0; display: flex; flex-direction: column; max-width: none; padding: 0; margin: 0;
+  color: var(--ink); background: oklch(.78 .12 128); overflow: hidden;
+  font-family: 'Avenir Next', 'Nunito', 'Segoe UI', sans-serif;
+}
+.shell button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; background: none; color: inherit; padding: 9px; border-radius: 8px; font-weight: 600; transition: background 150ms, color 150ms; }
+.shell button:hover { background: oklch(.62 .06 140 / .12); }
+.shell button:disabled { opacity: .3; }
+.shell button:focus-visible, .shell select:focus-visible { outline: 3px solid oklch(.55 .11 156); outline-offset: 3px; }
+.header { flex: 0 0 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 28px; background: var(--cream); z-index: 5; box-shadow: 0 2px 0 oklch(.43 .08 116 / .09); }
+.identity, .headerControls { display: flex; align-items: center; gap: 18px; }
+.identity h1 { font-size: 23px; font-weight: 850; letter-spacing: .13em; margin: 0; line-height: 1; white-space: nowrap; }
+.brandIcon { display: flex; align-items: center; color: var(--sage); }
+.separator { display: block; width: 1px; height: 26px; background: oklch(.44 .04 89 / .17); }
+.population { font-size: 13px; font-weight: 600; }
+.headerControls { gap: 7px; }
+.shell .clockTrigger { gap: 6px; padding: 6px 8px; }
+.clockTrigger[aria-expanded='true'] { background: oklch(.62 .06 140 / .12); }
+.calendarGlyph { display: flex; position: relative; color: var(--sage); }
+.calendarGlyph i { position: absolute; width: 5px; height: 5px; right: -2px; top: -2px; border-radius: 50%; background: oklch(.61 .11 57); box-shadow: 0 0 0 2px var(--cream); }
+.clock { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; min-width: 133px; padding: 0 5px; font-variant-numeric: tabular-nums; }
+.clock strong { font-size: 18px; font-weight: 750; letter-spacing: .025em; line-height: 1.1; }
+.clock > span { font-size: 10px; color: var(--muted-town); white-space: nowrap; }
+.weatherStatus { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted-town); padding-right: 13px; }
+.headerControls .separator { margin: 0 11px 0 1px; }
+.speed { font-size: 15px; min-width: 42px; font-variant-numeric: tabular-nums; }
+.stage { flex: 1; position: relative; min-height: 0; overflow: hidden; }
+.world { width: 100%; height: 100%; display: block; touch-action: none; user-select: none; outline: none; }
+.world:focus-visible { outline: 3px solid var(--sage); outline-offset: -4px; }
+.dragging { cursor: grabbing; }
+.townStamp { pointer-events: none; position: absolute; top: 28px; left: 30px; display: flex; align-items: flex-start; gap: 10px; padding: 12px 15px; background: oklch(.974 .031 88 / .94); border-radius: 12px; box-shadow: 0 3px 14px oklch(.37 .06 135 / .07); }
+.townStamp strong { display: block; font-size: 14px; letter-spacing: -.02em; font-weight: 750; }
+.townStamp div > span { display: block; font-size: 11px; color: var(--muted-town); margin-top: 3px; }
+.liveDot { flex: 0 0 6px; width: 6px; height: 6px; margin-top: 6px; border-radius: 50%; background: oklch(.62 .1 150); }
+.hoverName { position: absolute; top: 28px; left: 50%; transform: translateX(-50%); pointer-events: none; display: flex; align-items: center; gap: 7px; padding: 9px 13px; background: var(--cream); border-radius: 20px; box-shadow: 0 3px 13px oklch(.33 .08 125 / .1); font-size: 12px; }
+.bottomBar { position: absolute; bottom: 47px; left: 28px; right: 28px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; pointer-events: none; }
+.bottomBar > * { pointer-events: auto; }
+.tools, .zoomControls { display: flex; align-items: center; gap: 3px; padding: 6px; border-radius: 13px; background: var(--cream); box-shadow: 0 3px 16px oklch(.33 .08 125 / .13); }
+.toolDivider { width: 1px; height: 23px; background: oklch(.44 .04 89 / .17); margin: 0 5px; }
+.shell .activeTool { color: var(--sage); }
+.zoomControls { position: absolute; left: 50%; transform: translateX(-50%); padding: 6px; }
+.zoomControls > button { width: 35px; height: 40px; padding: 6px; }
+.zoomControls .zoomValue { width: 66px; gap: 1px; font-size: 17px; font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
+.zoomValue span { font-size: 12px; opacity: .65; }
+.mapHint { position: absolute; pointer-events: none; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 9px; white-space: nowrap; font-size: 10px; color: oklch(.36 .05 134); text-shadow: 0 1px 3px oklch(.94 .04 106 / .8); }
+.mapHint i { width: 2px; height: 2px; background: currentColor; border-radius: 50%; opacity: .6; }
+.inspector, .roster { position: absolute; background: var(--cream); border-radius: 16px; padding: 23px; box-shadow: 0 6px 26px oklch(.33 .08 125 / .15); }
+.inspector { right: 28px; bottom: 119px; width: 322px; }
+.inspector h2, .roster h2 { margin: 5px 0 0; font-size: 21px; font-weight: 750; line-height: 1.25; letter-spacing: -.035em; }
+.inspector p, .roster p { font-size: 12px; line-height: 1.75; color: var(--muted-town); margin: 15px 0 18px; }
+.shell .closePanel { position: absolute; right: 10px; top: 10px; padding: 6px; }
+.kicker { display: block; color: var(--muted-town); font-size: 9px; letter-spacing: .1em; font-weight: 700; }
+.personHeading { display: flex; align-items: center; gap: 16px; }
+.subtitle { display: block; margin-top: 5px; font-size: 12px; color: var(--sage); }
+.portrait { display: block; flex: 0 0 61px; height: 68px; position: relative; background: oklch(.92 .04 102); border-radius: 14px; overflow: hidden; }
+.portrait::before { content: ''; position: absolute; width: 39px; height: 31px; background: var(--shirt); border-radius: 45% 45% 0 0; bottom: -3px; left: 11px; }
+.portrait::after { content: ''; position: absolute; width: 30px; height: 30px; border-radius: 45%; left: 15px; top: 18px; background: var(--skin); box-shadow: inset 0 5px 0 var(--hair); }
+.portrait i { position: absolute; width: 33px; height: 20px; border-radius: 50%; background: var(--hair); top: 11px; left: 14px; z-index: 1; }
+.portrait b { position: absolute; width: 14px; height: 13px; border-radius: 50%; background: var(--hair); top: 4px; left: 23px; }
+.placeIcon { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 13px; margin-bottom: 17px; }
+.panelActions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.panelActions button { font-size: 11px; padding: 10px; }
+.shell .primaryAction { color: var(--cream); background: var(--sage); }
+.shell .primaryAction:hover { background: oklch(.42 .055 156); }
+.previewNote { display: block; font-size: 9px; color: var(--muted-town); margin-top: 17px; }
+.roster { top: 26px; left: 28px; width: 360px; max-height: calc(100% - 140px); overflow-y: auto; z-index: 3; }
+.panelHeading { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.panelHeading button { margin-right: -9px; }
+.roster p { margin: 8px 0 17px; }
+.residentGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.residentGrid button { font-size: 12px; justify-content: flex-start; padding: 10px 8px; }
+.residentGrid button svg { margin-left: auto; opacity: .4; }
+.avatarDot { width: 12px; height: 12px; border-radius: 50%; }
+.loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: oklch(.78 .12 128); font-size: 14px; }
+@media (min-width: 1600px) { .header { padding: 0 36px; } .townStamp, .bottomBar, .roster { left: 36px; } .inspector, .bottomBar { right: 36px; } }
+@media (max-width: 1000px) {
+  .header { height: 64px; flex-basis: 64px; padding: 0 19px; }
+  .identity { gap: 13px; } .identity h1 { font-size: 20px; }
+  .weatherStatus { display: none; }
+  .townStamp { top: 18px; left: 18px; }
+  .bottomBar { left: 18px; right: 18px; gap: 10px; }
+  .tools { gap: 0; }
+  .zoomControls { left: auto; position: static; transform: none; margin-left: auto; }
+  .inspector { right: 18px; }
+}
+@media (max-width: 600px) {
+  .header { position: relative; padding: 0 13px 32px; flex-basis: 94px; }
+  .shell .clockTrigger { position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); padding: 6px 8px; gap: 8px; }
+  .clock { flex-direction: row; align-items: center; gap: 10px; min-width: 0; padding: 0; }
+  .clock strong { font-size: 14px; }
+  .clock > span { font-size: 10px; }
+  .identity { gap: 9px; } .identity h1 { font-size: 17px; letter-spacing: .08em; }
+  .identity .separator, .headerControls .separator, .population span, .fullscreen { display: none !important; }
+  .population { gap: 0; padding: 6px !important; }
+  .headerControls { gap: 0; } .headerControls > button { padding: 8px; }
+  .brandIcon svg { width: 19px; }
+  .townStamp { top: 13px; left: 12px; padding: 9px 11px; gap: 7px; max-width: calc(100% - 24px); }
+  .townStamp strong { font-size: 12px; } .townStamp div > span { font-size: 9px; line-height: 1.5; }
+  .bottomBar { left: 10px; right: 10px; bottom: max(34px, env(safe-area-inset-bottom)); gap: 7px; }
+  .tools { padding: 4px; }
+  .toolDivider { margin: 0 2px; height: 20px; }
+  .zoomControls { padding: 4px; } .zoomControls > button { width: 27px; height: 38px; } .zoomControls .zoomValue { width: 44px; font-size: 14px; }
+  .zoomControls .toolDivider, .zoomControls > button:last-child { display: none; }
+  .mapHint { bottom: 11px; font-size: 8px; gap: 6px; } .mapHint > span:last-child, .mapHint > i:last-of-type { display: none; }
+  .inspector { bottom: 98px; right: 12px; width: min(310px, calc(100% - 24px)); padding: 19px; max-height: calc(100% - 250px); overflow: auto; }
+  .roster { top: 13px; left: 12px; width: min(340px, calc(100% - 24px)); max-height: calc(100% - 105px); padding: 19px; }
+  .hoverName { display: none; }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  .identity .separator, .population span { display: none; }
+  .identity { gap: 9px; }
+  .headerControls { gap: 2px; }
+  .clock { min-width: 113px; }
+  .clock strong { font-size: 16px; }
+  .headerControls .separator { margin: 0 3px; }
+}
+@media (prefers-reduced-motion: reduce) { .shell *, .shell *::after { transition: none; } }

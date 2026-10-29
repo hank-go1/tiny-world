@@ -1,0 +1,60 @@
+.panel { position: absolute; z-index: 6; top: 18px; bottom: 18px; right: 20px; width: min(426px, calc(100% - 40px)); display: flex; flex-direction: column; overflow: hidden; background: var(--cream); border: 1px solid oklch(.86 .025 95); border-radius: 18px; box-shadow: 0 8px 30px oklch(.3 .06 130 / .17); }
+.heading { flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 18px 17px 23px; border-bottom: 1px solid oklch(.89 .024 95); }
+.heading > div { display: flex; align-items: center; gap: 13px; }
+.calendarIcon { display: inline-flex; align-items: center; justify-content: center; width: 39px; height: 42px; border-radius: 11px; background: oklch(.91 .04 124); color: var(--sage); }
+.heading h2 { margin: 0; font-size: 18px; font-weight: 750; letter-spacing: -.03em; }
+.heading p { margin: 4px 0 0; color: var(--muted-town); font-size: 10px; }
+.body { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 19px 22px 23px; }
+.monthNavigation, .monthNavigation > div { display: flex; align-items: center; justify-content: space-between; gap: 5px; }
+.monthNavigation h3 { margin: 0; min-width: 137px; font-size: 15px; font-weight: 750; text-align: center; letter-spacing: -.02em; }
+.monthNavigation button { padding: 6px !important; }
+.monthNavigation .todayButton { border: 1px solid oklch(.82 .035 120); padding: 6px 11px !important; font-size: 10px; color: var(--sage); }
+.weekdays, .days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; }
+.weekdays { margin: 20px 0 8px; text-align: center; color: var(--muted-town); font-size: 9px; font-weight: 650; }
+.days .day { position: relative; display: flex; flex-direction: column; gap: 2px; padding: 5px 1px 3px; min-height: 43px; border-radius: 9px; font-size: 12px; font-variant-numeric: tabular-nums; }
+.day > span:first-child { display: flex; align-items: center; justify-content: center; height: 23px; width: 24px; border-radius: 50%; }
+.days .outside { color: oklch(.7 .02 110); }
+.days .current > span:first-child { box-shadow: inset 0 0 0 1px var(--sage); color: var(--sage); }
+.days .selected { background: var(--sage); color: var(--cream); }
+.days .selected:hover { background: oklch(.44 .055 156); }
+.days .selected > span:first-child { color: var(--cream); box-shadow: none; }
+.dots { height: 6px; display: flex; align-items: center; justify-content: center; gap: 3px; }
+.dots i { width: 4px; height: 4px; border-radius: 50%; box-shadow: 0 0 0 1px oklch(.98 .02 90 / .3); }
+.dots small { font-size: 8px; }
+.agendaHeading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 22px; margin-top: 18px; border-top: 1px solid oklch(.87 .025 100); }
+.agendaHeading > div > span { color: var(--muted-town); font-size: 8px; letter-spacing: .12em; font-weight: 700; }
+.agendaHeading h3 { margin: 5px 0 0; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.agendaHeading .addButton { background: oklch(.9 .035 125); color: var(--sage); padding: 7px; border-radius: 8px; }
+.empty { padding: 30px 0 12px; text-align: center; color: var(--muted-town); font-size: 11px; }
+.empty > svg { margin: 0 auto; opacity: .6; }
+.empty p { margin: 10px 0 6px; }
+.empty button { font-size: 11px; color: var(--sage); }
+.events { margin-top: 10px; }
+.event { display: flex; align-items: flex-start; gap: 9px; padding: 15px 0; border-bottom: 1px solid oklch(.9 .02 100); }
+.eventDot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; margin-top: 5px; }
+.eventDetails { flex: 1; min-width: 0; }
+.eventDetails > strong { display: block; font-size: 12px; font-weight: 700; overflow-wrap: anywhere; line-height: 1.5; }
+.eventDetails > span { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 4px; color: var(--muted-town); font-size: 10px; line-height: 1.5; }
+.eventDetails > span > i { width: 2px; height: 2px; background: currentColor; border-radius: 50%; margin: 0 2px; }
+.eventDetails small { display: block; font-size: 9px; margin-top: 5px; color: var(--sage); }
+.event > button { padding: 4px !important; color: var(--muted-town); }
+.editor { margin-top: 19px; }
+.editor h4 { margin: 0 0 15px; font-size: 13px; font-weight: 700; }
+.editor label { display: block; font-size: 10px; font-weight: 650; margin-top: 13px; }
+.editor label > span { color: var(--muted-town); font-weight: 400; font-size: 9px; }
+.editor input, .editor select { display: block; width: 100%; min-width: 0; margin-top: 6px; padding: 10px 9px; height: 38px; color: var(--ink); background: oklch(.987 .018 90); border: 1px solid oklch(.84 .028 103); border-radius: 7px; font-family: inherit; font-size: 12px; font-weight: 500; }
+.editor input:focus-visible, .editor select:focus-visible { outline: 2px solid var(--sage); outline-offset: 1px; }
+.editor input::placeholder { color: oklch(.65 .025 125); }
+.formRow { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; }
+.formActions { display: flex; gap: 9px; margin-top: 18px; }
+.formActions button { font-size: 11px; padding: 10px 12px; }
+.formActions .saveButton { color: var(--cream); background: var(--sage); }
+.formActions .saveButton:hover { background: oklch(.42 .055 156); }
+.error { color: oklch(.47 .12 30); background: oklch(.94 .025 50); border-radius: 8px; font-size: 11px; line-height: 1.6; padding: 10px; }
+.footer { flex-shrink: 0; padding: 12px 20px; border-top: 1px solid oklch(.89 .024 95); color: var(--muted-town); font-size: 9px; text-align: center; }
+@media (max-width: 600px) {
+  .panel { right: 12px; top: 12px; bottom: 12px; width: calc(100% - 24px); border-radius: 14px; }
+  .heading { padding: 16px 14px 14px 17px; } .body { padding: 15px 16px 20px; }
+  .monthNavigation h3 { min-width: 127px; font-size: 14px; }
+  .days .day { min-height: 39px; }
+}

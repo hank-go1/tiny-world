@@ -1,0 +1,6 @@
+# Copy to .dev.vars and supply your own keys. Never commit .dev.vars.
+# Either key is optional: the world renders without keys, but decisions need one.
+# Placeholder: your_openai_api_key_here
+OPENAI_API_KEY=
+# Placeholder: your_openrouter_api_key_here
+OPENROUTER_API_KEY=
