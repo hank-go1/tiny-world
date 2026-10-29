@@ -70,7 +70,7 @@
     }
   },
   "description": "Interactive creature and town worlds driven by structured AI decisions.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/hank-go1/tiny-world.git"

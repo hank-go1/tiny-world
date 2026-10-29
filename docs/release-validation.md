@@ -15,4 +15,4 @@ Checked locally on 2026-10-28 with Node.js 24.14.0 and npm 11.9.0.
 | GitHub Actions | Workflow prepared; it has not run on GitHub. Its audit step is expected to fail until dependency findings are resolved. |
 | Publication | No repository, remote, push, release tag, or public deployment created. |
 
-The pack is a review artifact. Copyright-owner/license confirmation, image-rights clearance, replacement of shared development keys, and dependency remediation remain required before publication. See `release-checklist.md`.
+The pack is a review artifact. MIT licensing was approved by the maintainer on 2026-10-29 and applied in `LICENSE`. Image-rights clearance, replacement of shared development keys, and dependency remediation remain tracked release tasks. See `release-checklist.md`.

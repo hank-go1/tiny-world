@@ -66,6 +66,6 @@ The pack command creates `releases/tiny-world/` and `releases/tiny-world.tar.gz`
 
 Review the [release checklist](docs/release-checklist.md), [contribution guide](CONTRIBUTING.md), [security notes](SECURITY.md), and [third-party notices](THIRD_PARTY_NOTICES.md) before publishing or hosting. Source scanning is a useful check, not a guarantee that every possible secret or rights issue has been found.
 
-## License status
+## License
 
-The project license is pending copyright-owner approval. `LICENSE.proposed` contains an MIT proposal; it is not an active license grant. Bundled third-party code retains its existing licenses. Image redistribution also needs the provenance review in [asset provenance](docs/asset-provenance.md). This preparation snapshot should not be represented as an already licensed open-source release.
+Project source code is licensed under the [MIT License](LICENSE), copyright © 2026 hank-go1. Third-party code retains its existing licenses and notices. See [asset provenance](docs/asset-provenance.md) for the separate image attribution and redistribution review.

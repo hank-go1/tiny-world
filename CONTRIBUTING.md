@@ -17,4 +17,4 @@ Simulation plans are validated model outputs; the application owns movement and 
 
 Report ordinary bugs through the repository's issues once it is published. Include reproduction steps, browser, Node version, and sanitized errors. Do not report security issues publicly; follow SECURITY.md.
 
-The maintainer must finalize the project license and asset rights before accepting contributions under that license. Do not add third-party art or code without its source, license, and required attribution.
+Contributions to project source code are accepted under the MIT License. Do not add third-party art or code without its source, license, and required attribution.

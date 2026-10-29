@@ -8,6 +8,6 @@ This inventory separates known facts from checks the copyright owner must comple
 | `public/creature.png` | Existing creature sprite supplied with this working demo. Original creator and license have not been established in the repository. | Identify and record the source and redistribution permission, or replace it with a cleared asset. |
 | `public/favicon.svg` | Project favicon; no explicit creator/license record. | Confirm authorship and include it in the chosen asset license. |
 | `public/file.svg`, `public/globe.svg`, `public/window.svg` | SVGs inherited from the application starter. No accompanying asset-specific license record was found. | Verify the starter's asset license or omit unused files from the final public release. |
-| Town rendering in `lib/town/render.ts` | Shapes drawn in application code. | Include project-authored drawing code in the approved code license after ownership is confirmed. |
+| Town rendering in `lib/town/render.ts` | Shapes drawn in application code. | Project-authored drawing code is covered by the root MIT license. |
 
 When replacing or adding an asset, record the creator, original URL or generation record, license, required attribution, and any modification. Do not assume that an image found in a repository or chat is freely redistributable.

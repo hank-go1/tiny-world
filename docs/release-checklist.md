@@ -1,19 +1,19 @@
 # Public release checklist
 
-Publication target: https://github.com/hank-go1/tiny-world, owned by the personal user account `hank-go1`. Source publication and a licensed release are separate milestones; outstanding license, asset, and security tasks remain listed below. No public deployment is included.
+Publication target: https://github.com/hank-go1/tiny-world, owned by the personal user account `hank-go1`. Source publication and a licensed release are separate milestones; outstanding asset and security tasks remain listed below. No public deployment is included.
 
 ## Prepared locally
 
 - Blank `.dev.vars.example`, pinned Node version, setup and architecture documentation.
 - Local hosting metadata made optional for clean clones and excluded from release source.
-- Contribution and security guidance, preserved third-party notices, asset inventory, and a proposed MIT license.
+- Contribution and security guidance, preserved third-party notices, asset inventory, and the approved MIT license.
 - Key-free tests, type checking, build, and source scanning configured in GitHub Actions.
 - Explicit source export that excludes local secrets, tool state, build products, and all Git history.
 
 ## Outstanding release checks
 
-- [ ] Confirm the copyright owner and authorization to release this work, including any employer-owned material.
-- [ ] Approve the code license. If using the MIT proposal, replace `[COPYRIGHT HOLDER]`, rename `LICENSE.proposed` to `LICENSE`, update `package.json` and the root entry in `package-lock.json` to `"license": "MIT"`, and replace the pending-license section of README.
+- [x] Maintainer requested MIT licensing on 2026-10-29. Copyright notice uses the personal repository owner `hank-go1`.
+- [x] Apply MIT in `LICENSE`, package metadata, and README; remove the proposed-license placeholder.
 - [ ] Clear each asset in `asset-provenance.md`; replace or omit anything without redistribution rights. Record the final asset license and attribution.
 - [ ] Revoke and replace development keys that were shared in chat or elsewhere. The archive excludes the local secrets file; exclusion does not revoke a key.
 - [x] GitHub destination confirmed by the maintainer: personal account `hank-go1`, repository `tiny-world`. Repository metadata added to package.json.
